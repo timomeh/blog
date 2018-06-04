@@ -1,33 +1,37 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import g from 'glamorous'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
+import HeaderTitle from './HeaderTitle'
+import HeaderCopy from './HeaderCopy'
+import Hidden from './Hidden'
+
+const Header = () => (
+  <Wrapper>
+    <Link to="/">
+      <Hidden>
+        <h1>timomeh</h1>
+      </Hidden>
+      <HeaderTitle />
+    </Link>
+    <g.Div marginTop={20}>
+      <HeaderCopy />
+    </g.Div>
+  </Wrapper>
 )
+
+const Wrapper = g.div({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  width: '100%',
+  maxWidth: 550,
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  paddingLeft: 10,
+  paddingRight: 10,
+  paddingTop: 60,
+  paddingBottom: 40
+})
 
 export default Header
