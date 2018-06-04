@@ -4,7 +4,7 @@ import { colors } from '../theme'
 export default g.time({
   display: 'block',
   textAlign: 'center',
-  marginBottom: 20,
+  marginBottom: 10,
   color: colors.shy,
   fontSize: '0.778em',
   fontWeight: 700,
