@@ -6,7 +6,7 @@ import Text from './Text'
 import PostDate from './PostDate'
 import PostTitle from './PostTitle'
 import PostActionLink from './PostActionLink'
-import PostNavLink from './PostNavLink'
+import PostNav from './PostNav'
 
 const Post = props => {
   const showMoreLink = props.isOverview && props.hasMore
@@ -21,28 +21,7 @@ const Post = props => {
         </Text>
       )}
       {!props.isOverview && (
-        <Text>
-          <PostNav>
-            {props.nextPost ? (
-              <PostNavLink
-                next
-                title={props.nextPost.frontmatter.title}
-                to={props.nextPost.frontmatter.path}
-              />
-            ) : (
-              <div />
-            )}
-            {props.prevPost ? (
-              <PostNavLink
-                prev
-                title={props.prevPost.frontmatter.title}
-                to={props.prevPost.frontmatter.path}
-              />
-            ) : (
-              <div />
-            )}
-          </PostNav>
-        </Text>
+        <PostNav next={props.nextPost} prev={props.prevPost} />
       )}
     </g.Div>
   )
@@ -57,12 +36,5 @@ Post.propTypes = {
   nextPost: PropTypes.object,
   prevPost: PropTypes.object
 }
-
-const PostNav = g.div({
-  display: 'flex',
-  flexFlow: 'row wrap',
-  marginTop: 80,
-  justifyContent: 'space-between'
-})
 
 export default Post
