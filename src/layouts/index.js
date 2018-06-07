@@ -7,6 +7,7 @@ import WebFont from 'webfontloader'
 import './index.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import ogImage from '../static/og-image.png'
 
 import 'prism-themes/themes/prism-base16-ateliersulphurpool.light.css'
 
@@ -30,6 +31,7 @@ class Layout extends React.Component {
             name="description"
             content={data.site.siteMetadata.description}
           />
+          <meta name="og:image" content={ogImage} />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>{children()}</div>
