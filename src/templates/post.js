@@ -17,7 +17,12 @@ const BlogPost = ({ data, pathContext, transition }) => {
           {data.post.frontmatter.title} – {data.site.siteMetadata.title}
         </title>
         <meta name="description" content={data.post.excerpt} />
-        {firstImage && <meta name="og:image" content={firstImage} />}
+        {firstImage && (
+          <meta
+            property="og:image"
+            content={data.site.siteMetadata.siteUrl + firstImage}
+          />
+        )}
       </Helmet>
       <Post
         title={data.post.frontmatter.title}
@@ -56,6 +61,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     post: markdownRemark(id: { eq: $id }) {

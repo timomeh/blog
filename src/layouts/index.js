@@ -31,7 +31,12 @@ class Layout extends React.Component {
             name="description"
             content={data.site.siteMetadata.description}
           />
-          <meta property="og:image" content={withPrefix('og-image.png')} />
+          <meta
+            property="og:image"
+            content={
+              data.site.siteMetadata.siteUrl + withPrefix('og-image.png')
+            }
+          />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>{children()}</div>
@@ -53,6 +58,7 @@ export const query = graphql`
       siteMetadata {
         title
         description
+        siteUrl
       }
     }
   }
