@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { css } from 'glamor'
 import WebFont from 'webfontloader'
+import { withPrefix } from 'gatsby-link'
 
 import './index.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import ogImage from '../static/og-image.png'
 
 import 'prism-themes/themes/prism-base16-ateliersulphurpool.light.css'
 
@@ -31,7 +31,7 @@ class Layout extends React.Component {
             name="description"
             content={data.site.siteMetadata.description}
           />
-          <meta name="og:image" content={ogImage} />
+          <meta property="og:image" content={withPrefix('og-image.png')} />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>{children()}</div>
