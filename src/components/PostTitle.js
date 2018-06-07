@@ -25,6 +25,7 @@ const Title = g.h2({
   lineHeight: 1.4,
   marginTop: 0,
   marginBottom: 40,
+  maxWidth: 600,
 
   '.wf-active &': {
     fontWeight: 500
@@ -33,10 +34,9 @@ const Title = g.h2({
   '& a': {
     color: 'inherit',
     textDecoration: 'none',
-    backgroundImage: `linear-gradient(
-      to top,
-      ${colors.marker} 0%,
-      ${colors.marker} 100%)`,
+    backgroundImage: `linear-gradient(to top, ${colors.marker} 0%, ${
+      colors.marker
+    } 100%)`,
     backgroundPosition: '0 calc(1em - 6px)',
     backgroundSize: '10px 10px',
     backgroundRepeat: 'repeat-x',
@@ -46,10 +46,9 @@ const Title = g.h2({
     marginRight: -4,
 
     '&:hover': {
-      backgroundImage: `linear-gradient(
-        to top,
-        ${colors.markerSecondary} 0%,
-        ${colors.markerSecondary} 100%)`
+      backgroundImage: `linear-gradient(to top, ${colors.markerSecondary} 0%, ${
+        colors.markerSecondary
+      } 100%)`
     }
   }
 })

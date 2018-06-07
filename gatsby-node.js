@@ -16,12 +16,11 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
   }
 }
 
-exports.setFieldsOnGraphQLNodeType = require('./src/extend-node-type')
-
 exports.createPages = async ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
   const indexTemplate = path.resolve('./src/templates/list.js')
   const postTemplate = path.resolve('./src/templates/post.js')
+  const pageTemplate = path.resolve('./src/templates/page.js')
   const POSTS_ON_PAGE = 10
 
   // Using async await. Query will likely be very similar to your pageQuery in index.js
@@ -29,7 +28,22 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
     query {
       posts: allMarkdownRemark(
         limit: 9999
+        filter: { fileAbsolutePath: { glob: "**/posts/**" } }
         sort: { fields: [frontmatter___date], order: DESC }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              path
+            }
+          }
+        }
+      }
+      pages: allMarkdownRemark(
+        limit: 9999
+        filter: { fileAbsolutePath: { glob: "**/pages/**" } }
       ) {
         edges {
           node {
@@ -50,15 +64,16 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
   }
 
   const posts = result.data.posts.edges
-  const pages = chunk(posts, POSTS_ON_PAGE)
+  const pages = result.data.pages.edges
+  const listPages = chunk(posts, POSTS_ON_PAGE)
 
   function getPageUrl(i) {
-    if (i < 0 || i > pages.length - 1) return null
+    if (i < 0 || i > listPages.length - 1) return null
     return i > 0 ? `page/${i}` : '/'
   }
 
   // Create post list pages.
-  pages.forEach(({ node }, i) => {
+  listPages.forEach(({ node }, i) => {
     const pageUrl = i > 0 ? `page/${i}` : '/'
     createPage({
       path: getPageUrl(i),
@@ -85,6 +100,17 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
         id: node.id,
         prev,
         next
+      }
+    })
+  })
+
+  // Create "static" pages.
+  pages.forEach(({ node }, i) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: pageTemplate,
+      context: {
+        id: node.id
       }
     })
   })

@@ -11,17 +11,15 @@ import PostNav from './PostNav'
 const Post = props => {
   const showMoreLink = props.isOverview && props.hasMore
   return (
-    <g.Div marginBottom={80} marginTop={40}>
-      <PostDate>{props.date}</PostDate>
+    <g.Div marginBottom={160} marginTop={40}>
+      {props.date && <PostDate>{props.date}</PostDate>}
       <PostTitle url={props.url} title={props.title} />
-      <Text dangerouslySetInnerHTML={{ __html: props.html }} />
+      {props.html && <Text dangerouslySetInnerHTML={{ __html: props.html }} />}
+      {props.children && <Text>{props.children}</Text>}
       {showMoreLink && (
         <Text>
-          <PostActionLink to={props.url}>weiterlesen...</PostActionLink>
+          <PostActionLink to={props.url}>weiterlesen…</PostActionLink>
         </Text>
-      )}
-      {!props.isOverview && (
-        <PostNav next={props.nextPost} prev={props.prevPost} />
       )}
     </g.Div>
   )
@@ -29,12 +27,10 @@ const Post = props => {
 
 Post.propTypes = {
   title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
+  date: PropTypes.string,
   url: PropTypes.string.isRequired,
   isOverview: PropTypes.bool,
-  html: PropTypes.string.isRequired,
-  nextPost: PropTypes.object,
-  prevPost: PropTypes.object
+  html: PropTypes.string
 }
 
 export default Post

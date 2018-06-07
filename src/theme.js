@@ -5,5 +5,5 @@ export const colors = {
   marker: '#B7FFDE',
   markerSecondary: '#B7FFFF',
   markerHighlight: '#FFB7F0',
-  shy: '#929A96'
+  pencil: '#6B706D'
 }

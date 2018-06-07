@@ -14,7 +14,7 @@ const Header = () => (
       </Hidden>
       <HeaderTitle />
     </Link>
-    <g.Div marginTop={20}>
+    <g.Div marginTop={40}>
       <HeaderCopy />
     </g.Div>
   </Wrapper>
@@ -25,13 +25,13 @@ const Wrapper = g.div({
   flexDirection: 'column',
   alignItems: 'center',
   width: '100%',
-  maxWidth: 550,
+  maxWidth: 560,
   marginLeft: 'auto',
   marginRight: 'auto',
-  paddingLeft: 10,
-  paddingRight: 10,
+  paddingLeft: 20,
+  paddingRight: 20,
   paddingTop: 60,
-  paddingBottom: 40
+  paddingBottom: 80
 })
 
 export default Header

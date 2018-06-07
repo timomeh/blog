@@ -6,6 +6,9 @@ import WebFont from 'webfontloader'
 
 import './index.css'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
+
+import 'prism-themes/themes/prism-base16-ateliersulphurpool.light.css'
 
 class Layout extends React.Component {
   componentDidMount() {
@@ -21,15 +24,16 @@ class Layout extends React.Component {
 
     return (
       <div>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' }
-          ]}
-        />
+        <Helmet>
+          <title>{data.site.siteMetadata.title}</title>
+          <meta
+            name="description"
+            content={data.site.siteMetadata.description}
+          />
+        </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>{children()}</div>
+        <Footer />
       </div>
     )
   }
@@ -46,6 +50,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
   }

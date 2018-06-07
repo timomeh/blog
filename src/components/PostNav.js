@@ -9,20 +9,22 @@ const PostNav = props => {
   return (
     <Text>
       <Row>
-        {props.next ? (
+        {props.hasNext ? (
           <PostNavLink
-            next
-            title={props.next.frontmatter.title}
-            to={props.next.frontmatter.path}
+            left
+            prependix={props.nextPrependix}
+            title={props.nextTitle}
+            to={props.nextTo}
           />
         ) : (
           <div />
         )}
-        {props.prev ? (
+        {props.hasPrev ? (
           <PostNavLink
-            prev
-            title={props.prev.frontmatter.title}
-            to={props.prev.frontmatter.path}
+            right
+            prependix={props.prevPrependix}
+            title={props.prevTitle}
+            to={props.prevTo}
           />
         ) : (
           <div />
@@ -33,8 +35,14 @@ const PostNav = props => {
 }
 
 PostNav.propTypes = {
-  next: PropTypes.object,
-  prev: PropTypes.object
+  hasNext: PropTypes.bool,
+  hasPrev: PropTypes.bool,
+  nextTitle: PropTypes.string,
+  prevTitle: PropTypes.string,
+  nextTo: PropTypes.string,
+  prevTo: PropTypes.string,
+  nextPrependix: PropTypes.string,
+  prevPrependix: PropTypes.string
 }
 
 const Row = g.div({
