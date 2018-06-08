@@ -32,7 +32,7 @@ module.exports = {
             options: {
               maxWidth: 740,
               showCaptions: true,
-              quality: 100
+              quality: 80
             }
           },
           'gatsby-remark-responsive-iframe',
