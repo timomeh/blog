@@ -5,6 +5,9 @@ module.exports = {
     siteUrl: 'https://timomeh.de'
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-netlify-cms'
+    },
     'gatsby-plugin-glamor',
     {
       resolve: 'gatsby-source-filesystem',
