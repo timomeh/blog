@@ -105,19 +105,9 @@ Nach gesetzlichen Vorgaben in Deutschland, erfolgt die Aufbewahrung insbesondere
 
 Nach gesetzlichen Vorgaben in Österreich erfolgt die Aufbewahrung insbesondere für 7 J gemäß § 132 Abs. 1 BAO (Buchhaltungsunterlagen, Belege/Rechnungen, Konten, Belege, Geschäftspapiere, Aufstellung der Einnahmen und Ausgaben, etc.), für 22 Jahre im Zusammenhang mit Grundstücken und für 10 Jahre bei Unterlagen im Zusammenhang mit elektronisch erbrachten Leistungen, Telekommunikations-, Rundfunk- und Fernsehleistungen, die an Nichtunternehmer in EU-Mitgliedstaaten erbracht werden und für die der Mini-One-Stop-Shop (MOSS) in Anspruch genommen wird.
 
-### Soundcloud
-
-Unsere Podcasts werden auf der Plattform „Soundcloud“, angeboten von SoundCloud Limited, Rheinsberger Str. 76/77, 10115 Berlin, Deutschland gespeichert und werden von dieser aus Platform wiedergegeben.
-
-Zu diesem Zweck binden wir sog. Soundcloud-Widgets in unsere Website ein. Dabei handelt es sich um Abspielsoftware, mit der Nutzer die Podcasts abspielen können. Hierbei kann Soundcloud messen, welche Podcasts in welchem Umfang gehört werden und diese Information pseudonym für statistische und betriebswirtschaftliche Zwecke verarbeiten. Hierzu können Cookies in den Browsern der Nuzer gespeichert und zwecks Bildung von Nutzerprofilen, z.B. für Zwecke der Ausgabee von Anzeigen, die den potentiellen Interessen der Nutzer entsprechen, verarbeitet werden. Im Fall von Nutzern, die bei Soundcloud registriert sind, kann Soundcloud die Hörinformationen deren Profilen zuordnen.
-
-Die Nutzung erfolgt auf Grundlage unserer berechtigten Interessen, d.h. Interesse an einer sicheren und effizienten Bereitstellung, Analyse sowie Optimierung unseres Audioangebotes gem. Art. 6 Abs. 1 lit. f. DSGVO.
-
-Weitere Informationen und Widerspruchsmöglichkeiten finden sich in der Datenschutzerklärung von Soundcloud: [https://soundcloud.com/pages/privacy](https://soundcloud.com/pages/privacy).
-
 ### Hosting und E-Mail-Versand
 
-Die von uns in Anspruch genommenen Hosting-Leistungen dienen der Zurverfügungstellung der folgenden Leistungen: Infrastruktur- und Plattformdienstleistungen, Rechenkapazität, Speicherplatz und Datenbankdienste, E-Mail-Versand, Sicherheitsleistungen sowie technische Wartungsleistungen, die wir zum Zwecke des Betriebs dieses Onlineangebotes einsetzen.
+Die von uns in Anspruch genommenen Hosting-Leistungen dienen der Zurverfügungstellung der folgenden Leistungen: Infrastruktur- und Plattformdienstleistungen, Rechenkapazität, Speicherplatz und Datenbankdienste, Sicherheitsleistungen sowie technische Wartungsleistungen, die wir zum Zwecke des Betriebs dieses Onlineangebotes einsetzen.
 
 Hierbei verarbeiten wir, bzw. unser Hostinganbieter Bestandsdaten, Kontaktdaten, Inhaltsdaten, Vertragsdaten, Nutzungsdaten, Meta- und Kommunikationsdaten von Kunden, Interessenten und Besuchern dieses Onlineangebotes auf Grundlage unserer berechtigten Interessen an einer effizienten und sicheren Zurverfügungstellung dieses Onlineangebotes gem. Art. 6 Abs. 1 lit. f DSGVO i.V.m. Art. 28 DSGVO (Abschluss Auftragsverarbeitungsvertrag).
 
@@ -153,5 +143,14 @@ Sofern die Nutzer Mitglieder der Plattform Twitter sind, kann Twitter den Aufruf
 ### Instagram
 
 Innerhalb unseres Onlineangebotes können Funktionen und Inhalte des Dienstes Instagram, angeboten durch die Instagram Inc., 1601 Willow Road, Menlo Park, CA, 94025, USA, eingebunden werden. Hierzu können z.B. Inhalte wie Bilder, Videos oder Texte und Schaltflächen gehören, mit denen Nutzer Inhalte dieses Onlineangebotes innerhalb von Instagram teilen können. Sofern die Nutzer Mitglieder der Plattform Instagram sind, kann Instagram den Aufruf der o.g. Inhalte und Funktionen den dortigen Profilen der Nutzer zuordnen. Datenschutzerklärung von Instagram: [http://instagram.com/about/legal/privacy/](http://instagram.com/about/legal/privacy/).
+
+
+### Soundcloud
+
+Innerhalb unseres Onlineangebotes können Funktionen und Inhalte des Dienstes Soundcloud, angeboten durch die Soundcloud Limited, Rheinsberger Str. 76/77, 10115 Berlin, Deutschland, eingebunden werden. Hierzu können z.B. Inhalte wie Bilder, Audiodateien und Schaltflächen gehören, mit denen Nutzer Inhalte dieses Onlineangebotes innerhalb von Soundcloud teilen können. Sofern die Nutzer Mitglieder der Plattform Soundcloud sind, kann Soundcloud den Aufruf der o.g. Inhalte und Funktionen den dortigen Profilen der Nutzer zuordnen. Datenschutzerklärung von Soundcloud: [https://soundcloud.com/pages/privacy](https://soundcloud.com/pages/privacy).
+
+### Spotify
+
+Innerhalb unseres Onlineangebotes können Funktionen und Inhalte des Dienstes Spotify, angeboten durch die Spotify AB, Birger Jarlsgatan 61, 113 56 Stockholm, Schweden, eingebunden werden. Hierzu können z.B. Inhalte wie Bilder, Audiodateien und Schaltflächen gehören, mit denen Nutzer Inhalte dieses Onlineangebotes innerhalb von Spotify teilen können. Sofern die Nutzer Mitglieder der Plattform Spotify sind, kann Spotify den Aufruf der o.g. Inhalte und Funktionen den dortigen Profilen der Nutzer zuordnen. Datenschutzerklärung von Spotify: [https://www.spotify.com/de/legal/privacy-policy/](https://www.spotify.com/de/legal/privacy-policy/).
 
 [Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke](https://datenschutz-generator.de)
