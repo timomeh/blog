@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import g from 'glamorous'
 
 import { colors } from '../theme'
@@ -8,7 +8,7 @@ import { colors } from '../theme'
 const PostTitle = props => {
   return (
     <Title>
-      <Link to={props.url}>{props.title}</Link>
+      <Link to={`${props.url}/`}>{props.title}</Link>
     </Title>
   )
 }
@@ -27,7 +27,7 @@ const Title = g.h2({
   marginBottom: 40,
   maxWidth: 600,
 
-  '.wf-active &': {
+  '.font--yep &': {
     fontWeight: 500
   },
 

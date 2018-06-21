@@ -1,5 +1,5 @@
 import g from 'glamorous'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import { colors } from '../theme'
 
 export default g(Link)({

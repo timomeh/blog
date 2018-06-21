@@ -1,7 +1,8 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 
+import Layout from '../components/Layout'
 import Post from '../components/Post'
 import PostNav from '../components/PostNav'
 import ContentWrapper from '../components/ContentWrapper'
@@ -9,37 +10,39 @@ import ContentWrapper from '../components/ContentWrapper'
 const MORE_SEP = '<!-- more -->'
 
 const IndexPage = ({ data, pathContext, transition }) => (
-  <div style={transition && transition.style}>
-    {pathContext.page > 0 && (
-      <Helmet>
-        <title>{`Seite ${pathContext.page} – ${
-          data.site.siteMetadata.title
-        }`}</title>
-      </Helmet>
-    )}
-    {data.posts.edges.map(({ node }) => (
-      <ContentWrapper key={node.id}>
-        <Post
-          title={node.frontmatter.title}
-          html={node.html.split(MORE_SEP)[0]}
-          url={`/${node.frontmatter.path}`}
-          date={node.frontmatter.date}
-          hasMore={node.html.includes(MORE_SEP)}
-          isOverview
+  <Layout>
+    <div style={transition && transition.style}>
+      {pathContext.page > 0 && (
+        <Helmet>
+          <title>{`Seite ${pathContext.page} – ${
+            data.site.siteMetadata.title
+          }`}</title>
+        </Helmet>
+      )}
+      {data.posts.edges.map(({ node }) => (
+        <ContentWrapper key={node.id}>
+          <Post
+            title={node.frontmatter.title}
+            html={node.html.split(MORE_SEP)[0]}
+            url={`/${node.frontmatter.path}`}
+            date={node.frontmatter.date}
+            hasMore={node.html.includes(MORE_SEP)}
+            isOverview
+          />
+        </ContentWrapper>
+      ))}
+      <ContentWrapper css={{ marginTop: -80 }}>
+        <PostNav
+          hasNext={!!pathContext.prevPage}
+          hasPrev={!!pathContext.nextPage}
+          nextTitle="Neuere Posts"
+          nextTo={pathContext.prevPage}
+          prevTitle="Ältere Posts"
+          prevTo={pathContext.nextPage}
         />
       </ContentWrapper>
-    ))}
-    <ContentWrapper css={{ marginTop: -80 }}>
-      <PostNav
-        hasNext={!!pathContext.prevPage}
-        hasPrev={!!pathContext.nextPage}
-        nextTitle="Neuere Posts"
-        nextTo={pathContext.prevPage}
-        prevTitle="Ältere Posts"
-        prevTo={pathContext.nextPage}
-      />
-    </ContentWrapper>
-  </div>
+    </div>
+  </Layout>
 )
 
 export default IndexPage

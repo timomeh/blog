@@ -7,7 +7,7 @@ export default g.div({
   color: colors.ink,
   lineHeight: 2.167,
 
-  '.wf-active &': {
+  '.font--yep &': {
     lineHeight: 1.8
   },
 

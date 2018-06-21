@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import g from 'glamorous'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import ContentWrapper from '../components/ContentWrapper'
 import { colors } from '../theme'
@@ -10,8 +10,8 @@ const links = [
   { title: 'Feed', to: '/feed.xml', external: true },
   { title: 'Twitter', to: 'https://twitter.com/timomeh' },
   { title: 'Instagram', to: 'https://instagram.com/timomeh' },
-  { title: 'Impressum', to: '/impressum' },
-  { title: 'Datenschutzerklärung', to: '/datenschutz' }
+  { title: 'Impressum', to: '/impressum/' },
+  { title: 'Datenschutzerklärung', to: '/datenschutz/' }
 ]
 
 const Footer = () => {

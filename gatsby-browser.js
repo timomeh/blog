@@ -1,13 +1,8 @@
-// Taken from https://github.com/gatsbyjs/gatsby/blob/f27dfac369c7518e3f47a7e61639fdef952d3680/examples/using-page-transitions/gatsby-browser.js
-/* eslint-disable react/prop-types */
 /* globals window CustomEvent */
-import React, { createElement } from 'react'
-import { Transition } from 'react-transition-group'
 import createHistory from 'history/createBrowserHistory'
+import FontFaceObserver from 'fontfaceobserver'
 
-import getTransitionStyle from './src/utils/getTransitionStyle'
-
-const timeout = 150
+const timeout = 250
 const historyExitingEventType = `history::exiting`
 
 const getUserConfirmation = (pathname, callback) => {
@@ -19,74 +14,28 @@ const getUserConfirmation = (pathname, callback) => {
     callback(true)
   }, timeout)
 }
-const history = createHistory({ getUserConfirmation })
-// block must return a string to conform
-history.block((location, action) => location.pathname)
-exports.replaceHistory = () => history
 
-class ReplaceComponentRenderer extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { exiting: false, nextPageResources: {} }
-    this.listenerHandler = this.listenerHandler.bind(this)
-  }
-
-  listenerHandler(event) {
-    const nextPageResources =
-      this.props.loader.getResourcesForPathname(
-        event.detail.pathname,
-        nextPageResources => this.setState({ nextPageResources })
-      ) || {}
-    this.setState({ exiting: true, nextPageResources })
-  }
-
-  componentDidMount() {
-    window.addEventListener(historyExitingEventType, this.listenerHandler)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener(historyExitingEventType, this.listenerHandler)
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (this.props.location.key !== nextProps.location.key) {
-      this.setState({ exiting: false, nextPageResources: {} })
-    }
-  }
-
-  render() {
-    const transitionProps = {
-      timeout: {
-        enter: 0,
-        exit: timeout
-      },
-      appear: true,
-      in: !this.state.exiting,
-      key: this.props.location.key
-    }
-    return (
-      <Transition {...transitionProps}>
-        {status =>
-          createElement(this.props.pageResources.component, {
-            ...this.props,
-            ...this.props.pageResources.json,
-            transition: {
-              status,
-              timeout,
-              style: getTransitionStyle({ status, timeout }),
-              nextPageResources: this.state.nextPageResources
-            }
-          })
-        }
-      </Transition>
-    )
-  }
+let history
+if (typeof document !== 'undefined') {
+  history = createHistory({ getUserConfirmation })
+  // block must return a string to conform
+  history.block((location, action) => location.pathname)
 }
 
-// eslint-disable-next-line react/display-name
-exports.replaceComponentRenderer = ({ props, loader }) => {
-  if (props.layout) {
-    return undefined
-  }
-  return createElement(ReplaceComponentRenderer, { ...props, loader })
+export let replaceHistory = () => history
+
+export const onClientEntry = () => {
+  const fontName = 'Fira Sans'
+  const fonts = [
+    new FontFaceObserver(fontName, { weight: 400 }),
+    new FontFaceObserver(fontName, { weight: 400, style: 'italic' }),
+    new FontFaceObserver(fontName, { weight: 500 }),
+    new FontFaceObserver(fontName, { weight: 500, style: 'italic' })
+  ]
+
+  Promise.all(fonts.map(font => font.load())).then(() => {
+    document.documentElement.className += ' font--yep'
+  })
 }
+
+export { historyExitingEventType, timeout }

@@ -5,7 +5,6 @@ module.exports = {
     siteUrl: 'https://timomeh.de'
   },
   plugins: [
-    'gatsby-plugin-glamor',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -42,8 +41,7 @@ module.exports = {
               inlineCodeMarker: '¿'
             }
           },
-          'gatsby-remark-smartypants',
-          'gatsby-remark-widows'
+          'gatsby-remark-smartypants'
         ]
       }
     },
@@ -57,24 +55,6 @@ module.exports = {
         theme_color: '#B7FFDE',
         display: 'minimal-ui',
         icon: 'src/static/icon.png' // This path is relative to the root of the site.
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-favicon',
-      options: {
-        logo: './src/static/favicon.png',
-        injectHTML: true,
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          twitter: false,
-          yandex: false,
-          windows: true
-        }
       }
     },
     {
@@ -145,8 +125,11 @@ module.exports = {
         showSpinner: false
       }
     },
+    'gatsby-plugin-glamor',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-catch-links'
+    'gatsby-plugin-offline',
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-netlify'
   ]
 }

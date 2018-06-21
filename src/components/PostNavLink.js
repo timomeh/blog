@@ -7,7 +7,10 @@ import PostActionLink from './PostActionLink'
 const PostNavLink = props => {
   return (
     <g.Div textAlign={props.right ? 'right' : 'left'} flex={1} minWidth={200}>
-      <PostActionLink to={props.to} css={{ lineHeight: '0.5 !important' }}>
+      <PostActionLink
+        to={`${props.to}/`}
+        css={{ lineHeight: '0.5 !important' }}
+      >
         {props.prependix && [
           <span key="word">{props.prependix}</span>,
           <br key="break" />
