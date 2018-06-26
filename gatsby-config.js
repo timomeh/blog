@@ -128,8 +128,8 @@ module.exports = {
     'gatsby-plugin-glamor',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-netlify'
+    'gatsby-plugin-netlify',
+    'gatsby-plugin-remove-serviceworker'
   ]
 }
