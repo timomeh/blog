@@ -140,5 +140,15 @@ export default g.div({
   '& :not(pre) > code': {
     whiteSpace: 'normal',
     padding: '.3em'
+  },
+
+  '& hr': {
+    border: 0,
+    height: '4px',
+    width: 100,
+    backgroundColor: colors.markerHighlight,
+    opacity: 0.3,
+    marginTop: 40,
+    marginBottom: 40
   }
 })
