@@ -7,15 +7,6 @@
 const path = require('path')
 const chunk = require('lodash/chunk')
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  if (stage === 'build-html') {
-    config.loader('null', {
-      test: /webfontloader/,
-      loader: 'null-loader'
-    })
-  }
-}
-
 exports.createPages = async ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
   const indexTemplate = path.resolve('./src/templates/list.js')

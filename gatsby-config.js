@@ -129,7 +129,6 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-netlify',
-    'gatsby-plugin-remove-serviceworker'
+    'gatsby-plugin-netlify'
   ]
 }

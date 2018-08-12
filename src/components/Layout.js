@@ -1,8 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { css } from 'glamor'
-import { StaticQuery } from 'gatsby'
-import { withPrefix } from 'gatsby-link'
+import { StaticQuery, withPrefix } from 'gatsby'
 
 import '../index.css'
 import Transition from '../components/Transition'
