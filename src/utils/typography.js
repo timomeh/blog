@@ -70,7 +70,7 @@ const typography = new Typography({
     },
 
     // make image overlap container. urgh, much important
-    '.gatsby-resp-image-wrapper': {
+    '.gatsby-resp-image-wrapper, .gatsby-resp-iframe-wrapper': {
       marginLeft: rhythm(-0.5) + ' !important',
       marginRight: rhythm(-0.5) + ' !important',
       maxWidth: 'none !important'
