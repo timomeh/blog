@@ -7,7 +7,11 @@ function NotFoundPage() {
   const html = '<p>Diese Seite gibt es nicht. 🤷‍♂️'
   return (
     <Layout>
-      <Entry title="Inhalt nicht verfügbar" slug="/" html={html} />
+      <Entry
+        fields={{ slug: '/' }}
+        frontmatter={{ title: 'Seite nicht gefunden' }}
+        html={html}
+      />
     </Layout>
   )
 }

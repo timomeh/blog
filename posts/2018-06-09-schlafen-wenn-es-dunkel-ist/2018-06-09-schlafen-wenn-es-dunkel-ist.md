@@ -2,6 +2,7 @@
 title: Schlafen, wenn es dunkel ist
 date: 2018-06-09
 draft: false
+type: default
 ---
 
 Als ich Ende 2016 nach Köln gezogen bin, hatte meine neue Wohnung ein großartiges Feature: Rollläden. Das war für mich sehr aufregend, weil ich endlich wieder in totaler Finsternis schlafen konnte.

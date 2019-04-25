@@ -14,9 +14,9 @@ function PageTemplate({ data }) {
         description={data.page.description}
       />
       <Entry
-        title={data.page.frontmatter.title}
+        frontmatter={data.page.frontmatter}
+        fields={data.page.fields}
         html={data.page.html}
-        slug={data.page.fields.slug}
       />
     </Layout>
   )

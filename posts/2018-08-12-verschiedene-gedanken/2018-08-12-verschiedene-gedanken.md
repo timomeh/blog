@@ -2,6 +2,7 @@
 title: Verschiedene Gedanken, die ich mir die letzten Wochen gemacht habe
 date: 2018-08-12
 draft: false
+type: default
 ---
 
 _Ich hatte mir ein paar Gedanken notiert, zu denen ich eigentlich jeweils einen Beitrag schreiben wollte. Irgendwie habe ich dann doch nicht die Muse dazu gefunden, deshalb schreibe ich sie jetzt einfach schnell runter._

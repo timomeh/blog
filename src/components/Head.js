@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
+import ogImage from '../static/og-image.png'
+
 function Head({ title, description }) {
   const data = useStaticQuery(graphql`
     query SiteMeta {
@@ -26,6 +28,7 @@ function Head({ title, description }) {
         { name: 'description', content: metaDescription },
         { name: 'og:title', content: metaTitle },
         { name: 'og:description', content: metaDescription },
+        { name: 'og:image', content: ogImage },
         { name: 'og:type', content: 'website' }
       ]}
     />

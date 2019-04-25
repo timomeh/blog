@@ -3,46 +3,52 @@ import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
-// import Text from './Text'
-// import PostActionLink from './PostActionLink'
-// import PostNav from './PostNav'
 import { rhythm, scale } from '../utils/typography'
 
-function Entry({ title, html, slug, date, hasMore }) {
+function Entry({ html, frontmatter, fields, hasMore }) {
+  const showTitle = frontmatter.type !== 'short'
+
   return (
-    <EntryContainer>
-      {date && <Date>{date}</Date>}
-      <Title>
-        <Link to={slug}>{title}</Link>
-      </Title>
+    <article>
+      {frontmatter.date && (
+        <PostDate>
+          <DateLink to={'/' + fields.slug}>{frontmatter.date}</DateLink>
+        </PostDate>
+      )}
+      {showTitle && (
+        <Title>
+          <Link to={'/' + fields.slug}>{frontmatter.title}</Link>
+        </Title>
+      )}
       <div dangerouslySetInnerHTML={{ __html: html }} />
       {hasMore && (
         <p>
-          <ReadMoreLink to={slug + '#more'}>weiterlesen…</ReadMoreLink>
+          <ReadMoreLink to={'/' + fields.slug + '#more'}>
+            weiterlesen…
+          </ReadMoreLink>
         </p>
       )}
-    </EntryContainer>
+    </article>
   )
 }
 
 Entry.propTypes = {
-  title: PropTypes.string.isRequired,
-  date: PropTypes.string,
-  slug: PropTypes.string.isRequired,
+  fields: PropTypes.shape({
+    slug: PropTypes.string.isRequired
+  }).isRequired,
+  frontmatter: PropTypes.shape({
+    date: PropTypes.string,
+    type: PropTypes.string
+  }).isRequired,
   html: PropTypes.string.isRequired,
   hasMore: PropTypes.bool
 }
 
-const EntryContainer = styled.article({
-  maxWidth: '76ch',
-  marginLeft: 'auto',
-  marginRight: 'auto',
-  paddingLeft: rhythm(0.5),
-  paddingRight: rhythm(0.5),
-  marginBottom: rhythm(5)
+const DateLink = styled(Link)({
+  backgroundImage: 'none !important'
 })
 
-const Date = styled.time(props => ({
+const PostDate = styled.time(props => ({
   display: 'block',
   textAlign: 'center',
   marginBottom: rhythm(0.5),

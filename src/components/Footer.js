@@ -32,7 +32,8 @@ function Footer() {
 
 const FooterContainer = styled.footer(props => ({
   padding: rhythm(0.5),
-  paddingBottom: rhythm(2.5),
+  paddingTop: rhythm(3),
+  paddingBottom: rhythm(1),
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',

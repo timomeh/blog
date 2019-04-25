@@ -12,7 +12,7 @@ const typography = new Typography({
   boldWeight: '500',
   bodyColor: theme.ink,
   overrideThemeStyles: ({ rhythm, scale }) => ({
-    'article a:not(.gatsby-resp-image-link), a.has-line': {
+    'article a:not(.gatsby-resp-image-link), .has-line': {
       color: 'inherit',
       textDecoration: 'none',
       backgroundImage: `linear-gradient(to top, ${theme.green} 0%, ${
@@ -27,7 +27,7 @@ const typography = new Typography({
       marginRight: '-0.11em'
     },
 
-    'article a:not(.gatsby-resp-image-link):hover, a.has-line:hover': {
+    'article a:not(.gatsby-resp-image-link):hover, .has-line:hover': {
       backgroundImage: `linear-gradient(to top, ${theme.blue} 0%, ${
         theme.blue
       } 100%)`

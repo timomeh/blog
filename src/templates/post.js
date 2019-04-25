@@ -5,12 +5,15 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Head from '../components/Head'
 import Entry from '../components/Entry'
+import PrevNext from '../components/PrevNext'
 
 function PostTemplate({ data, pageContext }) {
   const preparedHtml = data.post.html.replace(
     '<!-- more -->',
     '<!-- more --><div id="more"></div>'
   )
+  const { prev, next } = pageContext
+
   return (
     <Layout>
       <Head
@@ -18,12 +21,28 @@ function PostTemplate({ data, pageContext }) {
         description={data.post.description}
       />
       <Entry
-        title={data.post.frontmatter.title}
+        frontmatter={data.post.frontmatter}
+        fields={data.post.fields}
         html={preparedHtml}
-        slug={data.post.fields.slug}
-        date={data.post.frontmatter.date}
       />
-      {/* <PostNav prev={pageContext.prev} next={pageContext.next} /> */}
+      <PrevNext
+        prevTo={prev && '/' + prev.fields.slug}
+        nextTo={next && '/' + next.fields.slug}
+        prevContent={() => (
+          <>
+            Voriger Post:
+            <br />
+            {prev.frontmatter.title}
+          </>
+        )}
+        nextContent={() => (
+          <>
+            Nächster Post:
+            <br />
+            {next.frontmatter.title}
+          </>
+        )}
+      />
     </Layout>
   )
 }
@@ -46,6 +65,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "YYYY-MM-DD")
+        type
       }
     }
   }

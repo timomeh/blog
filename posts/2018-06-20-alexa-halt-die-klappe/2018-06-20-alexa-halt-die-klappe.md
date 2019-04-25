@@ -2,6 +2,7 @@
 title: Alexa, halt die Klappe!
 date: 2018-06-20
 draft: false
+type: default
 ---
 
 Es ist 2018: Meine Wohnung ist ausgestattet mit Philips Hue Leuchten, einige Smart-Steckdosen, und meine Heizung ist auch mit dem Internet verbunden. Vor 4 Jahren war das für mich noch Zukunftsmusik, deren Sinn ich noch nicht ganz verstanden habe. "Wow, wenn ich eine Notification bekomme kann das Licht im Wohnzimmer in einer bestimmten Farbe blinken. Toll."
