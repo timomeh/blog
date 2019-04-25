@@ -13,12 +13,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "@emotion/core": "^10.0.10",
-    "@emotion/styled": "^10.0.10",
-    "emotion-theming": "^10.0.10",
+    "@emotion/core": "10.0.10",
+    "@emotion/styled": "10.0.10",
+    "emotion-theming": "10.0.10",
     "gatsby": "2.3.29",
     "gatsby-image": "2.0.40",
-    "gatsby-plugin-emotion": "^4.0.6",
+    "gatsby-plugin-emotion": "4.0.6",
     "gatsby-plugin-feed": "2.1.1",
     "gatsby-plugin-manifest": "2.0.29",
     "gatsby-plugin-offline": "2.0.25",
@@ -42,12 +42,12 @@
     "typography": "0.16.19"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "eslint-plugin-react": "^7.12.4",
-    "prettier": "^1.17.0"
+    "babel-eslint": "10.0.1",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "prettier": "1.17.0"
   },
   "homepage": "https://github.com/timomeh/blog",
   "license": "MIT",
