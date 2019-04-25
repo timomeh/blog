@@ -1,61 +1,90 @@
 {
   "name": "blog",
+  "private": true,
   "description": "timomeh blog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Timo Mämecke <maemecketimo@gmail.com>",
-  "dependencies": {
-    "fontfaceobserver": "^2.0.13",
-    "gatsby": "next",
-    "gatsby-image": "next",
-    "gatsby-link": "next",
-    "gatsby-plugin-catch-links": "next",
-    "gatsby-plugin-favicon": "3.1.2",
-    "gatsby-plugin-feed": "next",
-    "gatsby-plugin-glamor": "^2.0.0-beta.3",
-    "gatsby-plugin-manifest": "next",
-    "gatsby-plugin-netlify": "^2.0.0-beta.6",
-    "gatsby-plugin-nprogress": "^2.0.0-beta.4",
-    "gatsby-plugin-offline": "^2.0.0-beta.2",
-    "gatsby-plugin-react-helmet": "next",
-    "gatsby-plugin-sharp": "next",
-    "gatsby-plugin-sitemap": "^2.0.0-beta.3",
-    "gatsby-remark-images": "next",
-    "gatsby-remark-prismjs": "next",
-    "gatsby-remark-responsive-iframe": "next",
-    "gatsby-remark-smartypants": "^2.0.0-beta.3",
-    "gatsby-source-filesystem": "next",
-    "gatsby-transformer-remark": "next",
-    "gatsby-transformer-sharp": "next",
-    "glamor": "^2.20.40",
-    "glamorous": "^4.13.1",
-    "lodash": "^4.17.10",
-    "prism-themes": "^1.0.1",
-    "prismjs": "^1.15.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-helmet": "^5.2.0",
-    "react-transition-group": "^2.3.1",
-    "remark": "^9.0.0",
-    "remark-frontmatter": "^1.2.0",
-    "remark-html": "^7.0.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "test": "echo \"lel nope\" && exit 1"
+    "dev": "gatsby develop",
+    "lint": "eslint .",
+    "start": "npm run dev",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "emotion-theming": "^10.0.10",
+    "gatsby": "2.3.29",
+    "gatsby-image": "2.0.40",
+    "gatsby-plugin-emotion": "^4.0.6",
+    "gatsby-plugin-feed": "2.1.1",
+    "gatsby-plugin-manifest": "2.0.29",
+    "gatsby-plugin-offline": "2.0.25",
+    "gatsby-plugin-react-helmet": "3.0.12",
+    "gatsby-plugin-sharp": "2.0.35",
+    "gatsby-plugin-typography": "2.2.13",
+    "gatsby-remark-copy-linked-files": "2.0.12",
+    "gatsby-remark-images": "2.0.6",
+    "gatsby-remark-prismjs": "3.2.8",
+    "gatsby-remark-responsive-iframe": "2.1.1",
+    "gatsby-remark-smartypants": "2.0.9",
+    "gatsby-source-filesystem": "2.0.32",
+    "gatsby-transformer-remark": "2.3.11",
+    "gatsby-transformer-sharp": "2.1.18",
+    "prismjs": "1.16.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-helmet": "5.2.0",
+    "react-typography": "0.16.19",
+    "typeface-fira-sans": "0.0.54",
+    "typography": "0.16.19"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "prettier": "^1.13.5"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.17.0"
   },
+  "homepage": "https://github.com/timomeh/blog",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/timomeh/blog"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "env": {
+      "node": true,
+      "browser": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended",
+      "plugin:react/recommended"
+    ],
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    },
+    "settings": {
+      "linkComponents": [
+        "Hyperlink",
+        {
+          "name": "Link",
+          "linkAttribute": "to"
+        }
+      ]
+    }
   }
 }

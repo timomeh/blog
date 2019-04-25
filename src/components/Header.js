@@ -1,37 +1,44 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import g from 'glamorous'
+import styled from '@emotion/styled'
 
-import HeaderTitle from './HeaderTitle'
-import HeaderCopy from './HeaderCopy'
-import Hidden from './Hidden'
+import { rhythm } from '../utils/typography'
+import Logo from './Logo'
 
-const Header = () => (
-  <Wrapper>
-    <Link to="/">
-      <Hidden>
-        <h1>timomeh</h1>
-      </Hidden>
-      <HeaderTitle />
-    </Link>
-    <g.Div marginTop={40}>
-      <HeaderCopy />
-    </g.Div>
-  </Wrapper>
-)
+function Header() {
+  return (
+    <HeaderContainer>
+      <Link to="/">
+        <Logo />
+      </Link>
+      <Shortbio>
+        Hi, ich bin{' '}
+        <Link to="/timo_iel" className="has-line">
+          Timo Mämecke
+        </Link>
+        , Software-Entwickler aus Köln.
+      </Shortbio>
+    </HeaderContainer>
+  )
+}
 
-const Wrapper = g.div({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  width: '100%',
-  maxWidth: 560,
-  marginLeft: 'auto',
-  marginRight: 'auto',
-  paddingLeft: 20,
-  paddingRight: 20,
-  paddingTop: 60,
-  paddingBottom: 80
-})
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: ${rhythm(2)};
+  padding-bottom: ${rhythm(4)};
+  padding-left: ${rhythm(1)};
+  padding-right: ${rhythm(1)};
+`
+
+const Shortbio = styled.p`
+  margin: 0;
+  margin-top: ${rhythm(1)};
+  text-align: center;
+`
 
 export default Header

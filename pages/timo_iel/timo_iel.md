@@ -1,6 +1,5 @@
 ---
 title: Hi 👋
-path: timo_iel
 draft: false
 ---
 

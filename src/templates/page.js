@@ -1,57 +1,44 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-import findImage from '../utils/findImage'
 import Layout from '../components/Layout'
-import ContentWrapper from '../components/ContentWrapper'
-import Post from '../components/Post'
+import Head from '../components/Head'
+import Entry from '../components/Entry'
 
-const Page = ({ data, transition }) => {
-  const firstImage = findImage(data.page.html)
-
+function PageTemplate({ data }) {
   return (
     <Layout>
-      <ContentWrapper style={transition && transition.style}>
-        <Helmet>
-          <title>
-            {data.page.frontmatter.title} – {data.site.siteMetadata.title}
-          </title>
-          <meta name="description" content={data.page.excerpt} />
-          {firstImage && (
-            <meta
-              property="og:image"
-              content={data.site.siteMetadata.siteUrl + firstImage}
-            />
-          )}
-        </Helmet>
-        <Post
-          title={data.page.frontmatter.title}
-          html={data.page.html}
-          url={`/${data.page.frontmatter.path}`}
-        />
-      </ContentWrapper>
+      <Head
+        title={data.page.frontmatter.title}
+        description={data.page.description}
+      />
+      <Entry
+        title={data.page.frontmatter.title}
+        html={data.page.html}
+        slug={data.page.fields.slug}
+      />
     </Layout>
   )
 }
 
-export default Page
+PageTemplate.propTypes = {
+  data: PropTypes.object.isRequired
+}
+
+export default PageTemplate
 
 export const query = graphql`
-  query PageQuery($id: String!) {
-    site {
-      siteMetadata {
-        title
-        siteUrl
+  query PageBySlug($slug: String!) {
+    page: markdownRemark(fields: { slug: { eq: $slug } }) {
+      description: excerpt(pruneLength: 320)
+      html
+      fields {
+        slug
       }
-    }
-    page: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        path
       }
-      excerpt(pruneLength: 320)
-      html
     }
   }
 `

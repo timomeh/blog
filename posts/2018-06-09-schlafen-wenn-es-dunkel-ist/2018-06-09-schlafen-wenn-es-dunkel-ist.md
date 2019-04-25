@@ -1,6 +1,5 @@
 ---
 title: Schlafen, wenn es dunkel ist
-path: 2018-06-09-schlafen-wenn-es-dunkel-ist
 date: 2018-06-09
 draft: false
 ---

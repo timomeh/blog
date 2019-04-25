@@ -1,6 +1,5 @@
 ---
 title: Impressum
-path: impressum
 draft: false
 ---
 

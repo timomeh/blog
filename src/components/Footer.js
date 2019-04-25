@@ -1,57 +1,64 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import g from 'glamorous'
 import { Link } from 'gatsby'
+import styled from '@emotion/styled'
 
-import ContentWrapper from '../components/ContentWrapper'
-import { colors } from '../theme'
+import { rhythm, scale } from '../utils/typography'
 
 const links = [
-  { title: 'Feed', to: '/feed.xml', external: true },
+  { title: 'Feed', to: '/feed.xml' },
   { title: 'Twitter', to: 'https://twitter.com/timomeh' },
   { title: 'Instagram', to: 'https://instagram.com/timomeh' },
-  { title: 'Impressum', to: '/impressum/' },
-  { title: 'Datenschutzerklärung', to: '/datenschutz/' }
+  { title: 'Impressum', to: '/impressum/', internal: true },
+  { title: 'Datenschutzerklärung', to: '/datenschutz/', internal: true }
 ]
 
-const Footer = () => {
+function Footer() {
   return (
-    <ContentWrapper css={{ marginTop: 80, marginBottom: 70 }}>
-      <FooterLinkList>
+    <FooterContainer>
+      <LinkList>
         {links.map(link => (
-          <FooterLink key={link.to}>
-            {link.to.startsWith('https') || link.external ? (
-              <a href={link.to}>{link.title}</a>
-            ) : (
+          <LinkItem key={link.title}>
+            {link.internal ? (
               <Link to={link.to}>{link.title}</Link>
+            ) : (
+              <a href={link.to}>{link.title}</a>
             )}
-          </FooterLink>
+          </LinkItem>
         ))}
-      </FooterLinkList>
-    </ContentWrapper>
+      </LinkList>
+    </FooterContainer>
   )
 }
 
-const FooterLinkList = g.ul({
-  margin: 0,
-  padding: 0,
-  listStyleType: 'none',
+const FooterContainer = styled.footer(props => ({
+  padding: rhythm(0.5),
+  paddingBottom: rhythm(2.5),
   display: 'flex',
-  flexFlow: 'row wrap',
+  alignItems: 'center',
   justifyContent: 'center',
-  fontSize: '0.778em',
-  color: colors.pencil
-})
+  color: props.theme.pencil,
+  ...scale(-0.5)
+}))
 
-const FooterLink = g.li({
-  marginLeft: 10,
-  marginRight: 10,
-  marginBottom: 10,
+const LinkList = styled.ul`
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+`
 
-  '& a': {
-    color: 'inherit',
-    textDecoration: 'none'
+const LinkItem = styled.li`
+  margin-left: ${rhythm(0.3)};
+  margin-right: ${rhythm(0.3)};
+
+  &::before {
+    content: none;
   }
-})
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+`
 
 export default Footer

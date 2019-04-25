@@ -2,7 +2,11 @@ module.exports = {
   siteMetadata: {
     title: 'timomeh',
     description: 'Hi, ich bin Timo Mämecke, Software-Entwickler aus Köln.',
-    siteUrl: 'https://timomeh.de'
+    siteUrl: 'https://timomeh.de',
+    social: {
+      twitter: 'timomeh',
+      instagram: 'timomeh'
+    }
   },
   plugins: [
     {
@@ -19,34 +23,91 @@ module.exports = {
         name: 'pages'
       }
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         excerpt_separator: '<!-- more -->',
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 740,
               showCaptions: true,
               quality: 80
             }
           },
-          'gatsby-remark-responsive-iframe',
+          {
+            resolve: 'gatsby-remark-responsive-iframe',
+            options: {
+              wrapperStyle: 'margin-bottom: 1.0725rem'
+            }
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              inlineCodeMarker: '¿'
+              inlineCodeMarker: '±'
             }
           },
+          'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants'
         ]
       }
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': edge.node.html }]
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { fileAbsolutePath: { glob: "**/posts/**" } }
+                ) {
+                  edges {
+                    node {
+                      excerpt(format: HTML)
+                      html
+                      fields { slug }
+                      frontmatter { title date }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/feed.xml',
+            title: 'timomeh'
+          }
+        ]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'timomeh',
         short_name: 'timomeh',
@@ -54,81 +115,18 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#B7FFDE',
         display: 'minimal-ui',
-        icon: 'src/static/icon.png' // This path is relative to the root of the site.
+        icon: 'src/static/icon.png'
       }
     },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-        {
-          site {
-            siteMetadata {
-              title
-              description
-              siteUrl
-              site_url: siteUrl
-            }
-          }
-        }
-      `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.html.split('<!-- more -->')[0],
-                  url:
-                    site.siteMetadata.siteUrl +
-                    '/' +
-                    edge.node.frontmatter.path,
-                  guid:
-                    site.siteMetadata.siteUrl +
-                    '/' +
-                    edge.node.frontmatter.path,
-                  custom_elements: [{ 'content:encoded': edge.node.html }]
-                })
-              })
-            },
-            query: `
-            {
-              allMarkdownRemark(
-                limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] },
-                filter: {
-                  frontmatter: { draft: { ne: true } }
-                  fileAbsolutePath: { glob: "**/posts/**" }
-                }
-              ) {
-                edges {
-                  node {
-                    html
-                    frontmatter {
-                      title
-                      date
-                      path
-                    }
-                  }
-                }
-              }
-            }
-          `,
-            output: '/feed.xml'
-          }
-        ]
-      }
-    },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        color: '#FFB7F0',
-        showSpinner: false
-      }
-    },
-    'gatsby-plugin-glamor',
-    'gatsby-plugin-sitemap',
+    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-netlify'
+    'gatsby-plugin-emotion',
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        omitGoogleFont: true,
+        pathToConfigModule: 'src/utils/typography'
+      }
+    }
   ]
 }

@@ -1,59 +1,41 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Post from '../components/Post'
-import PostNav from '../components/PostNav'
-import ContentWrapper from '../components/ContentWrapper'
+import Head from '../components/Head'
+import Entry from '../components/Entry'
 
-const MORE_SEP = '<!-- more -->'
+function ListTemplate({ data, pageContext }) {
+  const { currentPage, numPages } = pageContext
 
-const IndexPage = ({ data, pathContext, transition }) => (
-  <Layout>
-    <div style={transition && transition.style}>
-      {pathContext.page > 0 && (
-        <Helmet>
-          <title>{`Seite ${pathContext.page} – ${
-            data.site.siteMetadata.title
-          }`}</title>
-        </Helmet>
-      )}
-      {data.posts.edges.map(({ node }) => (
-        <ContentWrapper key={node.id}>
-          <Post
-            title={node.frontmatter.title}
-            html={node.html.split(MORE_SEP)[0]}
-            url={`/${node.frontmatter.path}`}
-            date={node.frontmatter.date}
-            hasMore={node.html.includes(MORE_SEP)}
-            isOverview
-          />
-        </ContentWrapper>
-      ))}
-      <ContentWrapper css={{ marginTop: -80 }}>
-        <PostNav
-          hasNext={!!pathContext.prevPage}
-          hasPrev={!!pathContext.nextPage}
-          nextTitle="Neuere Posts"
-          nextTo={pathContext.prevPage}
-          prevTitle="Ältere Posts"
-          prevTo={pathContext.nextPage}
+  return (
+    <Layout>
+      <Head title={currentPage > 1 ? 'Seite ' + currentPage : null} />
+      {data.posts.edges.map(({ node: post }) => (
+        <Entry
+          key={post.frontmatter.slug}
+          title={post.frontmatter.title}
+          html={post.excerpt}
+          slug={post.fields.slug}
+          date={post.frontmatter.date}
+          hasMore={post.html.includes('<!-- more -->')}
         />
-      </ContentWrapper>
-    </div>
-  </Layout>
-)
+      ))}
+      {/* <ListNav currentPage={currentPage} numPages={numPages} /> */}
+    </Layout>
+  )
+}
 
-export default IndexPage
+ListTemplate.propTypes = {
+  data: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired
+}
+
+export default ListTemplate
 
 export const query = graphql`
-  query IndexPagedQuery($skip: Int!, $limit: Int!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
+  query PostList($skip: Int!, $limit: Int!) {
     posts: allMarkdownRemark(
       filter: {
         frontmatter: { draft: { ne: true } }
@@ -65,15 +47,14 @@ export const query = graphql`
     ) {
       edges {
         node {
-          id
+          fields {
+            slug
+          }
           frontmatter {
             title
-            path
             date(formatString: "YYYY-MM-DD")
           }
-          # Excerpt is not working properly, waiting for:
-          # https://github.com/gatsbyjs/gatsby/issues/4459
-          # excerpt
+          excerpt(format: HTML)
           html
         }
       }

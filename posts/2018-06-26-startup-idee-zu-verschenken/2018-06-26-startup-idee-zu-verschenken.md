@@ -1,6 +1,5 @@
 ---
-title: "Ich habe eine Startup-Idee, und ich schenke sie dir"
-path: 2018-06-26-startup-idee-zu-verschenken
+title: 'Ich habe eine Startup-Idee, und ich schenke sie dir'
 date: 2018-06-26
 draft: false
 ---
@@ -17,7 +16,11 @@ Meine Nachbarn bestellen auch viel bei Amazon. Unsere Papiertonnen sind ständig
 
 Ich bin davon überzeugt, dass weitere Tonnen das Problem nicht lösen. Ein gefalteter Karton will wieder zurück in seine Ursprungsform. Wenn meine Nachbarn einen Karton fröhlich in die Tonne stopfen, und die Pappe entfaltet sich darin wieder, räumt der nächste Hausbewohner garantiert nicht den Müll nochmal raus, um alles sauber und ordentlich wieder einzusortieren. Das ist kein Problem von meinen Nachbarn, ich mache nämlich bestimmt das Gleiche. Um eine Papiertonne effizient zu füllen, muss mit einigem Aufwand alles zerrissen werden – natürlich geht es hier auch um Gemütlichkeit.
 
-**Die Lösung: hol meine Kartons ab, und ich bezahle dich dafür.** Das ist mein voller Ernst. Komm mit einem Kleintransporter zu mir gefahren, lade meinen sperrigen Papiermüll ein, und ich bin ein glücklicher und wiederkehrender Kunde. Müll ist eine eklige Angelegenheit? Papiermüll nicht. Niemand ekelt sich vor Kartons. Aber ich bekomme jetzt schon Schweißperlen auf der Stirn, wenn ich nur daran denke, was ich mit all den Kartons zur Weihnachtszeit machen soll.
+**Die Lösung: hol meine Kartons ab, und ich bezahle dich dafür.**
+
+<!-- more -->
+
+Das ist mein voller Ernst. Komm mit einem Kleintransporter zu mir gefahren, lade meinen sperrigen Papiermüll ein, und ich bin ein glücklicher und wiederkehrender Kunde. Müll ist eine eklige Angelegenheit? Papiermüll nicht. Niemand ekelt sich vor Kartons. Aber ich bekomme jetzt schon Schweißperlen auf der Stirn, wenn ich nur daran denke, was ich mit all den Kartons zur Weihnachtszeit machen soll.
 
 Der Online-Versand steigt von Jahr zu Jahr. Die KEP-Branche (Kurier-Express-Paket) ist eine der am stärksten wachsenden Branchen ([Quelle](https://www.biek.de/tl_files/biek/downloads/papiere/BIEK_KEP-Studie_2016.pdf#page=21)), weil wir uns jeden Scheiß liefern lassen. Mittlerweile hat Amazon sogar einen eigenen Lieferdienst, weil wir so viel bestellen, dass es finanziell einfach sinnvoller ist. Auf die Schnelle finde ich kein Diagramm für die Anzahl der versendeten Pakete über die letzten Jahre, und wenn ich eins finden würde, dürfte ich es garantiert nicht verwenden, aber ich stelle es mir ungefähr so vor:
 

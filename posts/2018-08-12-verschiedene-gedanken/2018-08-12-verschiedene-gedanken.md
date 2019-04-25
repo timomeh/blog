@@ -1,6 +1,5 @@
 ---
 title: Verschiedene Gedanken, die ich mir die letzten Wochen gemacht habe
-path: 2018-08-12-verschiedene-gedanken
 date: 2018-08-12
 draft: false
 ---
@@ -21,10 +20,10 @@ Mein Onkel hat in den letzten Monaten gewaltig abgenommen, und er meinte zu mir,
 
 **Investitionen, die ich viel früher hätte machen sollen:**
 
-  - Wie konnte ich ein Jahr lang ohne meinen Waschtrockner leben? Damals™ bin ich immer mit meinem Sack Wäsche zum Waschsalon um die Ecke gegangen, und habe mein Leben als Waschsalongänger einfach so hingenommen. Rückblickend schreckliche Zeiten.
-  - Ich habe mir ein [anständiges Kopfkissen](https://www.amazon.de/dp/B073JQW1KW/) gekauft und habe endlich wieder einen erholsamen Schlaf. Die letzten Monate habe ich immer schlechter geschlafen, weil ich ständig in der Nacht mein Kopfkissen gewechselt, gedreht und zerknüllt habe.
-  - Ich benutze [Flaschenpost](https://www.flaschenpost.de/) (ein bekannter Getränkelieferant) jetzt auch schon etwas länger, aber trotzdem habe ich viel zu lange Getränke geschleppt, nachdem ich nach Köln gezogen bin. Bei jeder Bestellung denke ich mir: "Geil ey, Großstadt".
-  - In diese Liste wird wohl bald mein Staubsauger-Roboter mit aufgenommen, der aktuell noch im Amazon Einkaufswagen liegt.
+- Wie konnte ich ein Jahr lang ohne meinen Waschtrockner leben? Damals™ bin ich immer mit meinem Sack Wäsche zum Waschsalon um die Ecke gegangen, und habe mein Leben als Waschsalongänger einfach so hingenommen. Rückblickend schreckliche Zeiten.
+- Ich habe mir ein [anständiges Kopfkissen](https://www.amazon.de/dp/B073JQW1KW/) gekauft und habe endlich wieder einen erholsamen Schlaf. Die letzten Monate habe ich immer schlechter geschlafen, weil ich ständig in der Nacht mein Kopfkissen gewechselt, gedreht und zerknüllt habe.
+- Ich benutze [Flaschenpost](https://www.flaschenpost.de/) (ein bekannter Getränkelieferant) jetzt auch schon etwas länger, aber trotzdem habe ich viel zu lange Getränke geschleppt, nachdem ich nach Köln gezogen bin. Bei jeder Bestellung denke ich mir: "Geil ey, Großstadt".
+- In diese Liste wird wohl bald mein Staubsauger-Roboter mit aufgenommen, der aktuell noch im Amazon Einkaufswagen liegt.
 
 ---
 

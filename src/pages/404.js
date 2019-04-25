@@ -1,35 +1,15 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Helmet from 'react-helmet'
 
-import ContentWrapper from '../components/ContentWrapper'
 import Layout from '../components/Layout'
-import Post from '../components/Post'
+import Entry from '../components/Entry'
 
-const NotFoundPage = ({ data, transition }) => (
-  <Layout>
-    <ContentWrapper style={transition && transition.style}>
-      <Helmet>
-        <title>Nichts gefunden – {data.site.siteMetadata.title}</title>
-      </Helmet>
-      <Post title="Inhalt nicht verfügbar" url="/">
-        <p>
-          Diese Seite gibt es nicht. 🤷‍ Versuche es doch mal{' '}
-          <Link to="/">hier</Link>.
-        </p>
-      </Post>
-    </ContentWrapper>
-  </Layout>
-)
+function NotFoundPage() {
+  const html = '<p>Diese Seite gibt es nicht. 🤷‍♂️'
+  return (
+    <Layout>
+      <Entry title="Inhalt nicht verfügbar" slug="/" html={html} />
+    </Layout>
+  )
+}
 
 export default NotFoundPage
-
-export const query = graphql`
-  query FourOhFourQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
