@@ -19,7 +19,7 @@ const typography = new Typography({
         theme.green
       } 100%)`,
       backgroundPosition: '0 calc(1em - 0.2em)',
-      backgroundSize: '10px 0.35em',
+      backgroundSize: '1rem 0.35em',
       backgroundRepeat: 'repeat-x',
       paddingLeft: '0.11em',
       paddingRight: '0.11em',

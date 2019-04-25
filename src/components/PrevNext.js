@@ -41,7 +41,7 @@ const Row = styled.div`
 `
 
 const LinkContainer = styled.div`
-  min-width: 200px;
+  min-width: 11rem;
   flex: 1 1 0%;
   padding: ${rhythm(0.5)};
 `

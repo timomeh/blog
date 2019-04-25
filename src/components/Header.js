@@ -26,7 +26,7 @@ const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 560px;
+  max-width: 31rem;
   margin-left: auto;
   margin-right: auto;
   padding-top: ${rhythm(2)};
