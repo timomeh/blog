@@ -1,7 +1,6 @@
 ---
 title: Alexa, halt die Klappe!
 date: 2018-06-20
-draft: false
 type: default
 ---
 

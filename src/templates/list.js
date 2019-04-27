@@ -55,10 +55,7 @@ export default ListTemplate
 export const query = graphql`
   query PostList($skip: Int!, $limit: Int!) {
     posts: allMarkdownRemark(
-      filter: {
-        frontmatter: { draft: { ne: true } }
-        fileAbsolutePath: { glob: "**/posts/**" }
-      }
+      filter: { fileAbsolutePath: { glob: "**/posts/**" } }
       sort: { fields: [frontmatter___date], order: DESC }
       skip: $skip
       limit: $limit

@@ -1,6 +1,5 @@
 ---
 title: Impressum
-draft: false
 ---
 
 #### Angaben gemäß § 5 TMG:

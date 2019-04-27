@@ -1,7 +1,6 @@
 ---
 title: Verschiedene Gedanken, die ich mir die letzten Wochen gemacht habe
 date: 2018-08-12
-draft: false
 type: default
 ---
 

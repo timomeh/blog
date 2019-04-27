@@ -1,6 +1,5 @@
 ---
 title: Hi 👋
-draft: false
 ---
 
 Ich bin Timo Mämecke, Software-Entwickler bei [Railslove](https://railslove.com) und wohne in Köln. Ich beschäftige mich viel mit Webtechnologien und Musik, spiele immer mal wieder an meinem Klavier, und sitze manchmal auch vor der Orgel (große, die meist in einer Kirche stehen).

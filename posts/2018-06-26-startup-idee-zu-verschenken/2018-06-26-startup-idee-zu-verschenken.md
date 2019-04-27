@@ -1,7 +1,6 @@
 ---
 title: 'Ich habe eine Startup-Idee, und ich schenke sie dir'
 date: 2018-06-26
-draft: false
 type: default
 ---
 
