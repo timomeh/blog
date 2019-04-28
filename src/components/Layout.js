@@ -12,8 +12,11 @@ import NewContentBanner from '../components/NewContentBanner'
 
 function Layout({ children }) {
   const [hasUpdate, setHasUpdate] = React.useState(false)
-  window.__meh__showUpdateAvailableBanner = () => {
-    setHasUpdate(true)
+
+  if (typeof window !== 'undefined') {
+    window.__meh__showUpdateAvailableBanner = () => {
+      setHasUpdate(true)
+    }
   }
 
   return (
