@@ -26,13 +26,13 @@ Wenn man in der Library auf ein Album oder einen Artist klickt, kommt man zu ein
 
 Für Alben hat sich Spotify dann doch eine Lösung überlegt: ein Switch, mit dem nur tatsächlich gespeicherte Alben angezeigt werden, und nicht mehr alle möglichen Alben. Das wäre schonmal eine okaye Lösung, wenn Spotify 👏 nicht 👏 so 👏 unfähig 👏 wäre.
 
-**Für Spotify ist alles ein Album, auch Singles.** Meine Alben sind trotz des Toggles trotzdem noch zugemüllt mit Songs, die nur als Single erschienen sind, oder Songs, die ich als Singleauskopplung gespeichert hatte, bevor das Album erschienen ist. – Oder manchmal auch das Album und ein paar Singleauskopplungen daraus, wodurch ich auch Songs doppelt in der Library habe. Außerdem existiert der Toggle nur in der Desktop-App und nicht in der Android-App. Außerdem: warum gibt es diesen Toggle nur bei Alben? WARUM NICHT BEI SONGS?
+**Für Spotify ist alles ein Album, auch Singles.** Meine Alben sind trotz des Toggles immer noch zugemüllt mit Songs, die nur als Single erschienen sind, oder Songs, die ich als Singleauskopplung gespeichert hatte, bevor das Album erschienen ist. – Oder manchmal auch das Album und ein paar Singleauskopplungen daraus, wodurch ich auch Songs doppelt in der Library habe. Außerdem existiert der Toggle nur in der Desktop-App und nicht in der Android-App. Und dazu stellt sich mir die Frage: warum gibt es diesen Toggle nur bei Alben? WARUM NICHT BEI SONGS?
 
 <img src="./saved-albums-only.gif" />
 
 ## Was ich will
 
-In meiner Musiksammlung will ich einzelne Songs speichern, vergleichbar wie ich mir früher verschiedene mp3s auf meinen alten mp3-Player gezogen habe oder auf CD gebrannt habe. Die kann ich dann durchshufflen, wenn mir danach ist. Außerdem will ich Alben speichern, als würde man sich ein Album kaufen und es ins Regal stellen. Die Alben kann ich durchstöbern und finde eins, auf das ich Lust habe.
+In meiner Musiksammlung will ich einzelne Songs speichern, vergleichbar wie ich mir früher verschiedene mp3s auf meinen alten mp3-Player gezogen habe oder auf CD gebrannt habe. Die kann ich dann durchshufflen, wenn mir danach ist. Außerdem will ich Alben speichern, als würde ich mir ein physikalisches Album kaufen und in mein Regal stellen. Die Alben kann ich durchstöbern und finde eins, auf das ich Lust habe.
 
 Spotify hatte die Starred-Playlist durch die Library abgelöst, damit man sich die heimische CD-Kollektion auch digital aufbauen kann. Aber eigentlich ist die Library nur die Starred-Playlist mit ein bisschen Gruppierung obendrauf. So will ich mir keine **Sammlung** aufbauen.
 
