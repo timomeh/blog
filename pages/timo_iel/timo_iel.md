@@ -4,7 +4,7 @@ title: Hi 👋
 
 Ich bin Timo Mämecke, Software-Entwickler bei [Railslove](https://railslove.com) und wohne in Köln. Ich beschäftige mich viel mit Webtechnologien und Musik, spiele immer mal wieder an meinem Klavier, und sitze manchmal auch vor der Orgel (große, die meist in einer Kirche stehen).
 
-<img src="./timo.jpg" title="Disclaimer: Den Neckbeard bin ich mittlerweile losgeworden." />
+<img src="./timo.jpg" />
 
 Diesen Blog gibt es in dieser Form seit Juni 2018. Alles davor liegt in einem Backup, weil ich zu faul bin, den ganzen Inhalt zu ex- und importieren. Ich schreibe hier über all das, was mir durch den Kopf schwirrt. Außerdem möchte ich mein Leben ein bisschen dokumentieren.
 
