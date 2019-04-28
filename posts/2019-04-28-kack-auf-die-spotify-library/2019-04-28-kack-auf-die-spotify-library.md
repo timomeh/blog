@@ -22,9 +22,11 @@ Meist will ich in so einem Moment den Song gerne in seiner normalen Version hör
 
 <img src="./saved-songs-from-album.gif" />
 
-Wenn man in der Library auf ein Album oder einen Artist klickt, kommt man zu einer Übersicht der **gespeicherten Songs des Albums oder Artists** – entgegen allen UI-Patterns und Erwartungen, die Spotify in der App etabliert hat. Erst über einen Link kommt man dort hin, wo man hin will. Warum ist das ein eigener Screen, auf dem meist nur nur ein Song zu sehen ist? Warum ist das nicht einfach eine Sektion beim Arist oder dem Album?
+Wenn man in der Library auf ein Album oder einen Artist klickt, kommt man zu einer Übersicht der **gespeicherten Songs des Albums oder Artists** – entgegen allen UI-Patterns und Erwartungen, die Spotify in der App etabliert hat. Erst über einen Link kommt man dort hin, wo man hin will. Warum ist das ein eigener Screen, auf dem meist nur nur ein Song zu sehen ist? Warum ist das nicht einfach eine Sektion beim Artist oder Album?
 
-Für Alben hat sich Spotify dann doch eine Lösung überlegt: ein Switch, damit nur tatsächlich gespeicherte Alben angezeigt werden, und nicht mehr alle möglichen Alben. Das wäre schonmal eine okaye Lösung, wenn Spotify 👏 nicht 👏 so 👏 unfähig 👏 wäre. **Für Spotify ist nämlich alles ein Album, auch Singles.** Meine Alben sind also immer noch zugemüllt mit Songs, die nur als Single erschienen sind, oder Songs, die ich als Singleauskopplung gespeichert hatte, bevor das Album erschienen ist. Oder manchmal das Album und ein paar Singleauskopplungen daraus, wodurch ich auch Songs doppelt in der Library habe. Außerdem existiert der Toggle nur in der Desktop-App, nicht in der Android-App. Und warum gibt es diesen Toggle nur bei Alben? WARUM NICHT BEI SONGS?
+Für Alben hat sich Spotify dann doch eine Lösung überlegt: ein Switch, mit dem nur tatsächlich gespeicherte Alben angezeigt werden, und nicht mehr alle möglichen Alben. Das wäre schonmal eine okaye Lösung, wenn Spotify 👏 nicht 👏 so 👏 unfähig 👏 wäre.
+
+**Für Spotify ist alles ein Album, auch Singles.** Meine Alben sind trotz des Toggles trotzdem noch zugemüllt mit Songs, die nur als Single erschienen sind, oder Songs, die ich als Singleauskopplung gespeichert hatte, bevor das Album erschienen ist. – Oder manchmal auch das Album und ein paar Singleauskopplungen daraus, wodurch ich auch Songs doppelt in der Library habe. Außerdem existiert der Toggle nur in der Desktop-App und nicht in der Android-App. Außerdem: warum gibt es diesen Toggle nur bei Alben? WARUM NICHT BEI SONGS?
 
 <img src="./saved-albums-only.gif" />
 
@@ -34,6 +36,6 @@ In meiner Musiksammlung will ich einzelne Songs speichern, vergleichbar wie ich 
 
 Spotify hatte die Starred-Playlist durch die Library abgelöst, damit man sich die heimische CD-Kollektion auch digital aufbauen kann. Aber eigentlich ist die Library nur die Starred-Playlist mit ein bisschen Gruppierung obendrauf. So will ich mir keine **Sammlung** aufbauen.
 
-Wenn ich einen Song gut finde, heißt das nicht, dass ich das ganze Album mag. Und wenn ich ein Album gut finde, will ich nicht alle Songs des Albums in meinem Mixtape haben und geshuffled hören. In [Muse's "Drones"](https://open.spotify.com/album/2wart5Qjnvx1fd7LPdQxgJ) gibt es den Song "Drill Sergeant", der einfach 21 Sekunden lang rumschreit, weil es eine Überleitung zum nachfolgenden Song ist. Alben sind Gesamtwerke. Sowas will ich aber nicht in meiner Songkollektion haben, weil es ohne Zusammenhang einfach nur sinnlos ist.
+Wenn ich einen Song gut finde, heißt das nicht, dass ich das ganze Album mag. Und wenn ich ein Album gut finde, will ich nicht alle Songs des Albums in meinem Mixtape haben und geshuffled hören. In [Muse's _Drones_](https://open.spotify.com/album/2wart5Qjnvx1fd7LPdQxgJ) gibt es den Song _Drill Sergeant_, der einfach 21 Sekunden lang rumschreit, weil es eine Überleitung zum nachfolgenden Song ist. Alben sind Gesamtwerke. So einen Song will ich aber nicht in meiner Songkollektion haben, weil er ohne Zusammenhang einfach nur sinnlos ist.
 
 Argh. So bringt das alles nichts. Ich nutze jetzt wieder meine Daily Mix Playlist und muss mal meine Library aufräumen, damit ich sie wenigstens für Alben nutzen kann.
