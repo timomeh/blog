@@ -8,8 +8,14 @@ import theme from '../utils/theme'
 import Head from '../components/Head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import NewContentBanner from '../components/NewContentBanner'
 
 function Layout({ children }) {
+  const [hasUpdate, setHasUpdate] = React.useState(false)
+  window.__meh__showUpdateAvailableBanner = () => {
+    setHasUpdate(true)
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Head />
@@ -18,6 +24,7 @@ function Layout({ children }) {
         <main>{children}</main>
         <Footer />
       </Wrapper>
+      {hasUpdate && <NewContentBanner />}
     </ThemeProvider>
   )
 }
