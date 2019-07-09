@@ -10,8 +10,8 @@ function NotFoundPage() {
     <Layout>
       <Helmet>
         <title>
-          Has a `{'&lt;'}b{'&gt;'}` bold `{'&lt;'}/b{'&gt;'}` `{'&lt;'}br
-          {'&gt;'}` with `{'&lt;'}img src=x onerror=alert('xss!'){'&gt;'}`
+          Has a `&{'lt;'}b&{'gt;'}` bold `&{'lt;'}/b&{'gt;'}` `&{'lt;'}br &
+          {'gt;'}` with `&{'lt;'}img src=x onerror=alert('xss!')&{'gt;'}`
         </title>
       </Helmet>
       <Entry
